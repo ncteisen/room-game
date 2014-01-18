@@ -194,6 +194,15 @@ your hand
             key = True
             inventory = "key"
             
+        elif "look" in resp and "mind" in resp:
+            print """
+As you search your deep and inner psyche, you feel a sudden pressure in
+your pocket. You reach in and alas, there is a small key. It is now in
+your hand
+"""
+            key = True
+            inventory = "key"
+
         elif "sleep" in resp:
             print """
 You lie down on the plank-like mattress and shut your eyes. As you will
@@ -444,6 +453,30 @@ plastic in your hand
             else:
                 print "\nThere is nothing in your hand that is sharp enough to do that. Try again\n"
             cut = True
+        elif "cut" in resp and "hand" in resp:
+            if hand == "broken CD":
+                print "\nYou make the cut and the blood starts dripping onto the floor\n"
+            else:
+                print "\nThere is nothing in your hand that is sharp enough to do that. Try again\n"
+            cut = True
+        elif "slice" in resp and "hand" in resp:
+            if hand == "broken CD":
+                print "\nYou make the cut and the blood starts dripping onto the floor\n"
+            else:
+                print "\nThere is nothing in your hand that is sharp enough to do that. Try again\n"
+            cut = True
+        elif "cut" in resp and "leg" in resp:
+            if hand == "broken CD":
+                print "\nYou make the cut and the blood starts dripping onto the floor\n"
+            else:
+                print "\nThere is nothing in your hand that is sharp enough to do that. Try again\n"
+            cut = True
+        elif "slice" in resp and "leg" in resp:
+            if hand == "broken CD":
+                print "\nYou make the cut and the blood starts dripping onto the floor\n"
+            else:
+                print "\nThere is nothing in your hand that is sharp enough to do that. Try again\n"
+            cut = True
         elif "slice" in resp and "finger" in resp:
             if hand == "broken CD":
                 print "\nYou make the cut and the blood starts dripping onto the floor\n"
@@ -532,6 +565,18 @@ that you are sitting in front of your computer, back in the real world.
 Congradulations, you have escaped the mysterious challenges. Or have you...
 """
     
+    room5()
+
+def room5():
+
+    resp = ur()
+
+    print """
+You find yourself in a small dark room. It smells a little moldy,
+and you see some water pooled in dark puddle on the floor. There
+are no windows. You see one small door in front of you.
+"""
+
     room1()
 
 start()
